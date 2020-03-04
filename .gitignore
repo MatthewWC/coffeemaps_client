@@ -1,0 +1,8 @@
+node_modules
+
+# wrangler publish file
+dist
+# react build file
+build
+# wrangler worker file
+workers-site
