@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   mapViewRoot: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    height: '93%'
   }
 }))
 
