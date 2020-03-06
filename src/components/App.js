@@ -11,17 +11,16 @@ import MapView from './MapView'
 import Admin from './Admin/Admin'
 import Stores from './Admin/Stores'
 import Store from './Admin/Store'
-import Title from './Title'
-import UserPanel from './UserPanel'
 import Coffee from './Admin/Coffee'
+
+import Header from './Header/Header'
 
 function App() {
 
   return(
     <ApolloProvider client={client}>
       <BrowserRouter>
-          <Title/>
-          <UserPanel/>  
+          <Header/> 
         <Switch>
           <Route 
             exact path='/'
