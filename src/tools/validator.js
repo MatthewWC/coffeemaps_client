@@ -73,16 +73,6 @@ const validate = (form) => {
         }
       })
       break
-    case 'Create Coffee Form':
-        // check for empty fields
-        Object.keys(formFields).forEach(function (item){
-          if(formFields[item].type === 'text'){
-            if(validator.isEmpty(formFields[item].value)){
-              throw new Error('Fields cannot be empty')
-            }
-          }
-        })
-      break
     case 'Update Store Form':
       Object.keys(formFields).forEach(function (item){
         // check for empty fields
@@ -98,6 +88,16 @@ const validate = (form) => {
           }
         }
       })
+      break
+    case 'Create Coffee Form':
+        // check for empty fields
+        Object.keys(formFields).forEach(function (item){
+          if(formFields[item].type === 'text'){
+            if(validator.isEmpty(formFields[item].value)){
+              throw new Error('Fields cannot be empty')
+            }
+          }
+        })
       break
       case 'Update Coffee Form':
         // check for empty fields
