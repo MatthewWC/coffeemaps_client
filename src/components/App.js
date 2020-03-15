@@ -8,12 +8,12 @@ import Register from './Register'
 import Profile from './Profile'
 import EditProfile from './Profile/EditProfile'
 import MapView from './MapView'
-import Admin from './Admin/Admin'
-import Stores from './Admin/Stores'
-import Store from './Admin/Store'
-import Coffee from './Admin/Coffee'
-
+import AdminPanel from './Admin/AdminPanel/AdminPanel'
+import Coffee from './Admin/Store/Coffee/Coffee'
+import Store from './Admin/Store/Store'
 import Header from './Header/Header'
+import CreateStoreForm from './Admin/Store/CreateStoreForm'
+import CreateCoffeeForm from './Admin/Store/Coffee/CreateCoffeeForm'
 
 function App() {
 
@@ -51,15 +51,19 @@ function App() {
           <ProtectedAdminRoute>
             <Route
               exact path='/admin'
-              render={props => <Admin {...props} client={client}/>}
-            />
-            <Route
-              exact path='/stores'
-              render={props => <Stores {...props} client={client}/>}
+              render={props => <AdminPanel {...props} client={client}/>}
             />
             <Route 
               path='/store'
               render={props => <Store {...props} client={client}/>}
+            />
+            <Route
+              exact path='/createStore'
+              render={props => <CreateStoreForm {...props} client={client}/>}
+            />
+            <Route
+              exact path='/createCoffee'
+              render={props => <CreateCoffeeForm {...props} client={client}/>}
             />
             <Route
               path='/coffee'
