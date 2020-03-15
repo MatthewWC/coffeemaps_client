@@ -5,8 +5,10 @@ import { setContext } from 'apollo-link-context'
 
 const cache = new InMemoryCache()
 
+// http://localhost:4000/graphql
+// https://cmapi.matthewwcook.com/graphql
 const httpLink = new HttpLink({
-  uri: 'https://cmapi.matthewwcook.com/graphql',
+  uri: 'http://cmapi.matthewwcook.com/graphql',
 })
 
 const authLink = setContext((_, { headers }) => {
